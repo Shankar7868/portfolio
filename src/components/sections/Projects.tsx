@@ -391,23 +391,6 @@ export default function Projects() {
                       </ul>
                     </div>
 
-                    <div className="glass-card p-5 rounded-2xl bg-black/20 border border-white/5 flex flex-col justify-between">
-                      <div>
-                        <h4 className="text-sm font-extrabold text-white mb-4 flex items-center gap-2">
-                          <Cpu size={16} className="text-purple-400" /> Pipeline Graph
-                        </h4>
-                        <div className="bg-slate-950 p-4 rounded-xl border border-white/5 font-mono text-xs text-slate-400 leading-relaxed scrollbar-thin overflow-x-auto">
-                          Leaf Image → Preprocessing → Augmentation → ResNet50 Model → Disease Classification → Alert
-                        </div>
-                      </div>
-                      
-                      <div className="flex gap-2 flex-wrap mt-4">
-                        <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-xs font-bold text-slate-400">TensorFlow</span>
-                        <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-xs font-bold text-slate-400">Keras</span>
-                        <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-xs font-bold text-slate-400">Computer Vision</span>
-                        <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-xs font-bold text-slate-400">Python</span>
-                      </div>
-                    </div>
                   </div>
                 </div>
               </motion.div>

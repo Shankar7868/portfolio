@@ -5,7 +5,7 @@ import { cn } from '../../lib/utils';
 
 const navItems = [
   'Home', 'About', 'Education', 'Skills', 'Projects', 
-  'Achievements', 'Resume', 'Contact'
+  'Resume', 'Contact'
 ];
 
 export default function Navbar() {
