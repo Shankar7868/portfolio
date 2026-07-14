@@ -383,11 +383,11 @@ export default function Projects() {
                         <Network size={16} className="text-cyan-400" /> Deep Learning Concepts
                       </h4>
                       <ul className="space-y-2.5 text-sm text-slate-400 font-medium">
-                        <li className="flex items-center gap-2">• <span className="text-slate-300">ResNet50 Transfer Learning</span></li>
+                        <li className="flex items-center gap-2">• <span className="text-slate-300">VGG16 Transfer Learning</span></li>
                         <li className="flex items-center gap-2">• <span className="text-slate-300">ImageNet Pre-trained Model</span></li>
                         <li className="flex items-center gap-2">• <span className="text-slate-300">Image Preprocessing</span></li>
                         <li className="flex items-center gap-2">• <span className="text-slate-300">Data Augmentation</span></li>
-                        <li className="flex items-center gap-2">• <span className="text-slate-300">Multi-Class Disease Classification (4 Class)</span></li>
+                        <li className="flex items-center gap-2">• <span className="text-slate-300">Multi-Class Disease Classification (4 Classes)</span></li>
                       </ul>
                     </div>
 
