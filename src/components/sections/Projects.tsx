@@ -75,7 +75,7 @@ const BrowserMockup: React.FC<BrowserMockupProps> = ({ children, url = "https://
 );
 
 export default function Projects() {
-  const [filter, setFilter] = useState<'all' | 'apps' | 'pipelines'>('all');
+  const filter = 'all';
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -123,39 +123,7 @@ export default function Projects() {
           </p>
         </motion.div>
 
-        {/* Filters */}
-        <div className="flex items-center justify-center gap-3 mb-16 select-none">
-          <button 
-            onClick={() => setFilter('all')}
-            className={`px-5 py-2.5 rounded-full text-sm font-bold border transition-all ${
-              filter === 'all' 
-                ? 'border-cyan-400/30 bg-cyan-400/10 text-white shadow-lg' 
-                : 'border-white/5 bg-white/5 text-slate-400 hover:text-white hover:bg-white/10'
-            }`}
-          >
-            All Projects
-          </button>
-          <button 
-            onClick={() => setFilter('apps')}
-            className={`px-5 py-2.5 rounded-full text-sm font-bold border transition-all ${
-              filter === 'apps' 
-                ? 'border-cyan-400/30 bg-cyan-400/10 text-white shadow-lg' 
-                : 'border-white/5 bg-white/5 text-slate-400 hover:text-white hover:bg-white/10'
-            }`}
-          >
-            AI Applications
-          </button>
-          <button 
-            onClick={() => setFilter('pipelines')}
-            className={`px-5 py-2.5 rounded-full text-sm font-bold border transition-all ${
-              filter === 'pipelines' 
-                ? 'border-cyan-400/30 bg-cyan-400/10 text-white shadow-lg' 
-                : 'border-white/5 bg-white/5 text-slate-400 hover:text-white hover:bg-white/10'
-            }`}
-          >
-            ML/DL Pipelines
-          </button>
-        </div>
+
 
         {/* Project List */}
         <motion.div
@@ -321,19 +289,7 @@ export default function Projects() {
                   
                   <div className="w-full lg:w-1/2">
                     <BrowserMockup url="https://lexiguard.vercel.app">
-                      <div className="absolute inset-0 bg-slate-900/60 flex items-center justify-center">
-                        <img 
-                          src="/lexiguard.jpg" 
-                          alt="LexiGuard Dashboard" 
-                          className="w-full h-full object-cover opacity-35" 
-                          onError={(e) => e.currentTarget.style.display = 'none'} 
-                        />
-                        <div className="absolute flex flex-col items-center gap-3 text-center px-6">
-                          <Brain className="text-purple-400 animate-pulse" size={36} />
-                          <span className="text-xs font-bold text-slate-300 font-mono tracking-widest">LEXIGUARD HUD DISPLAY</span>
-                          <span className="text-[10px] text-slate-500 font-mono">Secure Sandboxed Legal Agent Environment</span>
-                        </div>
-                      </div>
+                      <LivePreview url="https://lexiguard.vercel.app/" />
                     </BrowserMockup>
                   </div>
                 </div>
