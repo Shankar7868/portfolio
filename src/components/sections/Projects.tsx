@@ -366,14 +366,14 @@ export default function Projects() {
                 
                 <div className="flex flex-col gap-6">
                   <div>
-                    <span className="text-xs font-black uppercase tracking-widest text-purple-400 font-mono mb-3 block">Computer Vision & MedTech</span>
+                    <span className="text-xs font-black uppercase tracking-widest text-purple-400 font-mono mb-3 block">Computer Vision & AgriTech</span>
                     <h3 className="text-3xl font-black text-white mb-2 tracking-tight group-hover:text-purple-400 transition-colors duration-300">
-                      Cardiac MRI-Based CAD Detection
+                      Paddy Plant Disease Detection
                     </h3>
-                    <p className="text-cyan-400 font-extrabold text-base mb-6">Medical Imaging & Computer Vision</p>
+                    <p className="text-cyan-400 font-extrabold text-base mb-6">Agricultural AI & Computer Vision</p>
                     
                     <p className="text-slate-300 leading-relaxed mb-8 font-medium">
-                      A deep learning image diagnostic framework trained to detect Coronary Artery Disease (CAD) using Cardiac MRI scans. By applying Transfer Learning on the ResNet50 neural network architecture, the framework accurately isolates coronary artery boundaries and maps lesion probability density.
+                      AI-powered paddy disease detection application that accurately identifies diseases from paddy leaf images through an intuitive Streamlit interface. By providing quick and reliable disease predictions, the application supports early disease identification and helps users make informed decisions for crop management.
                     </p>
                   </div>
 
@@ -397,7 +397,7 @@ export default function Projects() {
                           <Cpu size={16} className="text-purple-400" /> Pipeline Graph
                         </h4>
                         <div className="bg-slate-950 p-4 rounded-xl border border-white/5 font-mono text-xs text-slate-400 leading-relaxed scrollbar-thin overflow-x-auto">
-                          MRI Scans → Normalization → Augmentation → ResNet50 Model → Binary Classification → CAD Alert
+                          Leaf Image → Preprocessing → Augmentation → ResNet50 Model → Disease Classification → Alert
                         </div>
                       </div>
                       

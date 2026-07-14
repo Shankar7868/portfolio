@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { Suspense } from 'react';
+import { Canvas } from '@react-three/fiber';
 import { motion } from 'framer-motion';
 // @ts-ignore
 import Typewriter from 'typewriter-effect';
 import { ArrowRight, Download, Mail } from 'lucide-react';
+import HeroScene from '../3d/HeroScene';
 
 export default function Hero() {
   const scrollTo = (id: string) => {
@@ -40,19 +42,19 @@ export default function Hero() {
   };
 
   return (
-    <section id="hero-content" className="relative min-h-screen flex flex-col items-center justify-center pt-24 md:pt-16 overflow-hidden container mx-auto px-6 gap-6 text-center">
+    <section id="hero-content" className="relative min-h-screen flex flex-col md:flex-row items-center pt-24 md:pt-16 overflow-hidden container mx-auto px-6 gap-6">
       
       {/* Background radial glow */}
       <div className="absolute top-1/4 left-1/4 w-[400px] h-[400px] bg-purple-600/10 rounded-full blur-[120px] pointer-events-none -z-10"></div>
       <div className="absolute bottom-1/4 right-1/4 w-[350px] h-[350px] bg-cyan-600/10 rounded-full blur-[100px] pointer-events-none -z-10"></div>
 
-      {/* Main Content */}
-      <div className="w-full z-10 flex flex-col items-center justify-center">
+      {/* Left Column: Text Content */}
+      <div className="w-full md:w-[48%] z-10 flex flex-col justify-center mb-6 md:mb-0">
         <motion.div
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="max-w-2xl flex flex-col items-center"
+          className="max-w-2xl"
         >
           <motion.h2 
             variants={itemVariants}
@@ -93,7 +95,7 @@ export default function Hero() {
 
           <motion.div 
             variants={itemVariants}
-            className="flex flex-wrap justify-center gap-4 mt-6"
+            className="flex flex-wrap gap-4 mt-6"
           >
             {/* View Projects CTA */}
             <motion.button 
@@ -133,7 +135,18 @@ export default function Hero() {
         </motion.div>
       </div>
 
-
+      {/* Right Column: 3D Scene */}
+      <div className="w-full md:w-[52%] h-[55vh] md:h-[80vh] relative z-0">
+        <Suspense fallback={
+          <div className="w-full h-full flex items-center justify-center font-mono text-cyan-400 text-sm tracking-widest animate-pulse">
+            LOADING HOLOGRAPHIC CORE...
+          </div>
+        }>
+          <Canvas camera={{ position: [0, 0, 10], fov: 45 }}>
+            <HeroScene />
+          </Canvas>
+        </Suspense>
+      </div>
       
     </section>
   );
