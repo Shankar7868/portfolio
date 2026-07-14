@@ -265,7 +265,7 @@ export default function Projects() {
 
                     <div className="flex gap-4">
                       <motion.a 
-                        href="https://github.com/Shankar7868" 
+                        href="https://lexi-guard-zeta.vercel.app/" 
                         target="_blank" 
                         rel="noreferrer" 
                         whileHover={{ scale: 1.03 }}
@@ -288,8 +288,8 @@ export default function Projects() {
                   </div>
                   
                   <div className="w-full lg:w-1/2">
-                    <BrowserMockup url="https://lexiguard.vercel.app">
-                      <LivePreview url="https://lexiguard.vercel.app/" />
+                    <BrowserMockup url="https://lexi-guard-zeta.vercel.app">
+                      <LivePreview url="https://lexi-guard-zeta.vercel.app/" />
                     </BrowserMockup>
                   </div>
                 </div>
