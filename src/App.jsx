@@ -19,7 +19,6 @@ import Contact from './components/sections/Contact';
 
 
 
-import ScrollPortal from './components/layout/ScrollPortal';
 
 function App() {
   // Theme setup - default to dark
@@ -34,7 +33,6 @@ function App() {
       <Navbar />
 
       <main className="relative z-10 w-full">
-        <ScrollPortal>
           <Hero />
           <About />
           <Education />
@@ -43,7 +41,6 @@ function App() {
           <Achievements />
           <Resume />
           <Contact />
-        </ScrollPortal>
       </main>
 
       <Footer />
