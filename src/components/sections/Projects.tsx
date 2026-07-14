@@ -157,7 +157,7 @@ export default function Projects() {
                     <p className="text-purple-400 font-extrabold text-lg mb-6">AI-Powered Learning Platform</p>
                     
                     <p className="text-slate-300 leading-relaxed mb-6 font-medium">
-                      EduGenie is a continuous AI study assistant that automatically generates customized educational content from user prompts. It dynamically creates Flashcards, Quizzes, Topic Comparisons, Q&A, Summaries, and Key Points to revolutionize personalized learning.
+                      EduTech platform delivering an AI-enhanced learning experience through intelligent study assistance, automated content generation, and interactive learning resources. By converting study materials into personalized summaries, quizzes, and flashcards, it enables learners to study with greater clarity and efficiency.
                     </p>
 
                     <h4 className="text-sm font-extrabold text-white uppercase tracking-wider mb-3">AI Workflow Architecture</h4>
