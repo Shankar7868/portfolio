@@ -83,8 +83,8 @@ export default function Navbar() {
   return (
     <>
       <motion.nav
-        initial={{ y: -80, opacity: 0 }}
-        animate={navbarHidden ? { y: -80, opacity: 0 } : { y: 0, opacity: 1 }}
+        initial={{ y: 0, opacity: 1 }}
+        animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
         className={cn(
           "fixed top-0 left-0 right-0 z-50 flex justify-center transition-all duration-300 pointer-events-none",
