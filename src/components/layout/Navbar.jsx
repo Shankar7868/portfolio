@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, useScroll, useMotionValueEvent, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import { cn } from '../../lib/utils';
@@ -10,42 +10,73 @@ const navItems = [
 
 export default function Navbar() {
   const { scrollY } = useScroll();
-  const [hidden, setHidden] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [navbarHidden, setNavbarHidden] = useState(true);
   const [activeSection, setActiveSection] = useState('Home');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
-  const sectionIndexMap = {
-    'Home': 0,
-    'About': 1,
-    'Education': 2,
-    'Skills': 3,
-    'Projects': 4,
-    'Achievements': 5,
-    'Resume': 6,
-    'Contact': 7
-  };
-
   useMotionValueEvent(scrollY, "change", (latest) => {
     setIsScrolled(latest > 50);
-
-    // Coordinate scroll height index to active nav item
-    const currentViewport = window.innerHeight;
-    const scrollIndex = Math.round(latest / (currentViewport || 1));
-    const matchedItem = navItems[scrollIndex];
-    if (matchedItem && matchedItem !== activeSection) {
-      setActiveSection(matchedItem);
-    }
+    // Hide navbar during the workspace zoom phase
+    setNavbarHidden(latest < window.innerHeight * 1.3);
   });
+
+  // Track active section via IntersectionObserver
+  useEffect(() => {
+    const observerOptions = {
+      root: null,
+      rootMargin: "-40% 0px -40% 0px", // Focus on middle area of viewport
+      threshold: 0
+    };
+
+    const observerCallback = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const id = entry.target.id;
+          const matchedItem = navItems.find(
+            (item) => item.toLowerCase() === id.toLowerCase()
+          );
+          if (matchedItem) {
+            setActiveSection(matchedItem);
+          }
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+    navItems.forEach((item) => {
+      const element = document.getElementById(item.toLowerCase());
+      if (element) {
+        observer.observe(element);
+      }
+    });
+
+    return () => observer.disconnect();
+  }, []);
 
   const scrollTo = (id) => {
     setMobileMenuOpen(false);
-    const index = sectionIndexMap[id];
-    if (index !== undefined) {
-      setActiveSection(id);
+    const targetId = id.toLowerCase();
+    
+    if (targetId === 'home') {
       window.scrollTo({
-        top: index * window.innerHeight,
+        top: 0,
+        behavior: 'smooth'
+      });
+      setActiveSection(id);
+      return;
+    }
+
+    const element = document.getElementById(targetId);
+    if (element) {
+      setActiveSection(id);
+      const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+      const offsetPosition = elementPosition - 80; // Offset by header height
+
+      window.scrollTo({
+        top: offsetPosition,
         behavior: 'smooth'
       });
     }
@@ -54,11 +85,9 @@ export default function Navbar() {
   return (
     <>
       <motion.nav
-        variants={{
-          visible: { y: 0, opacity: 1 }
-        }}
-        animate="visible"
-        transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+        initial={{ y: -80, opacity: 0 }}
+        animate={navbarHidden ? { y: -80, opacity: 0 } : { y: 0, opacity: 1 }}
+        transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
         className={cn(
           "fixed top-0 left-0 right-0 z-50 flex justify-center transition-all duration-300 pointer-events-none",
           isScrolled ? "top-4" : "top-0"

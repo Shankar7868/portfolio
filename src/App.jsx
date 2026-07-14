@@ -8,7 +8,7 @@ import Loader from './components/layout/Loader';
 import Footer from './components/layout/Footer';
 
 // Sections
-import Hero from './components/sections/Hero';
+import WorkspaceZoom from './components/sections/WorkspaceZoom';
 import About from './components/sections/About';
 import Skills from './components/sections/Skills';
 import Projects from './components/sections/Projects';
@@ -33,7 +33,7 @@ function App() {
       <Navbar />
 
       <main className="relative z-10 w-full">
-          <Hero />
+          <WorkspaceZoom />
           <About />
           <Education />
           <Skills />

@@ -7,24 +7,11 @@ import { ArrowRight, Download, Mail } from 'lucide-react';
 import HeroScene from '../3d/HeroScene';
 
 export default function Hero() {
-  const sectionIndexMap: Record<string, number> = {
-    'Home': 0,
-    'About': 1,
-    'Education': 2,
-    'Skills': 3,
-    'Projects': 4,
-    'Achievements': 5,
-    'Resume': 6,
-    'Contact': 7
-  };
-
   const scrollTo = (id: string) => {
-    // Normalise ID to capitalise first letter to match mapping
-    const formattedId = id.charAt(0).toUpperCase() + id.slice(1);
-    const index = sectionIndexMap[formattedId];
-    if (index !== undefined) {
-      window.scrollTo({
-        top: index * window.innerHeight,
+    const targetId = id.toLowerCase();
+    const element = document.getElementById(targetId);
+    if (element) {
+      element.scrollIntoView({
         behavior: 'smooth'
       });
     }
@@ -55,7 +42,7 @@ export default function Hero() {
   };
 
   return (
-    <section id="home" className="relative min-h-screen flex flex-col md:flex-row items-center pt-24 md:pt-16 overflow-hidden container mx-auto px-6 gap-6">
+    <section id="hero-content" className="relative min-h-screen flex flex-col md:flex-row items-center pt-24 md:pt-16 overflow-hidden container mx-auto px-6 gap-6">
       
       {/* Background radial glow */}
       <div className="absolute top-1/4 left-1/4 w-[400px] h-[400px] bg-purple-600/10 rounded-full blur-[120px] pointer-events-none -z-10"></div>
