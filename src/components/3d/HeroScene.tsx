@@ -137,12 +137,12 @@ export default function HeroScene() {
       />
 
       {/* Floating Tech Badges with Coordinate Alignment */}
-      <FloatingIcon position={[-2.4, 1.6, 0.8]} color="#61DAFB" text="React" />
+      <FloatingIcon position={[-2.4, 1.6, 0.8]} color="#8b5cf6" text="Antigravity" />
       <FloatingIcon position={[2.4, 2.0, -0.8]} color="#FFD43B" text="Python" />
       <FloatingIcon position={[-2.8, -1.0, 0.2]} color="#0db7ed" text="Docker" />
       <FloatingIcon position={[2.2, -1.5, 1.2]} color="#EA2845" text="n8n" />
-      <FloatingIcon position={[0, 2.6, -1.2]} color="#FF9900" text="AWS" />
-      <FloatingIcon position={[0.6, -2.4, 0.8]} color="#10B981" text="ML/DL" />
+      <FloatingIcon position={[0, 2.6, -1.2]} color="#D4A574" text="Claude" />
+      <FloatingIcon position={[0.6, -2.4, 0.8]} color="#007ACC" text="VS Code" />
     </group>
   );
 }
