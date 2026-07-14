@@ -315,7 +315,7 @@ export default function Projects() {
                     <p className="text-purple-400 font-extrabold text-base mb-6">Deep Learning & Audio Processing Pipeline</p>
                     
                     <p className="text-slate-300 leading-relaxed mb-8 font-medium">
-                      A comprehensive speech recognition framework built for the Telugu language leveraging the Kaldi toolkit. The system features acoustic feature extraction pipeline design, hidden Markov acoustic mapping, and robust language modeling to decode audio signals into readable scripts.
+                      Automatic Speech Recognition (ASR) application developed for Telugu speech, enabling accurate conversion of spoken audio into text using the Kaldi toolkit. The system is designed to support efficient Telugu speech transcription, showcasing the application of speech recognition techniques for regional languages.
                     </p>
                   </div>
 
