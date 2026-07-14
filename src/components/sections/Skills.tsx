@@ -37,22 +37,14 @@ const skillsData: SkillCategoryType[] = [
   },
 
   {
-    category: "Workflow Automation",
+    category: "Automation & Deployment",
     icon: Workflow,
     tag: "automation",
     skills: [
-      { name: "n8n", level: 90 }
-    ]
-  },
-  {
-    category: "Cloud & Deployment",
-    icon: Cloud,
-    tag: "cloud",
-    skills: [
+      { name: "n8n", level: 90 },
       { name: "Vercel", level: 80 }
     ]
   },
-
   {
     category: "Tools & Platforms",
     icon: Wrench,
