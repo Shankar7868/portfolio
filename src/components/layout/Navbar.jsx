@@ -11,15 +11,13 @@ const navItems = [
 export default function Navbar() {
   const { scrollY } = useScroll();
   const [isScrolled, setIsScrolled] = useState(false);
-  const [navbarHidden, setNavbarHidden] = useState(true);
+  const [navbarHidden, setNavbarHidden] = useState(false);
   const [activeSection, setActiveSection] = useState('Home');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     setIsScrolled(latest > 50);
-    // Hide navbar during the workspace zoom phase
-    setNavbarHidden(latest < window.innerHeight * 1.3);
   });
 
   // Track active section via IntersectionObserver
