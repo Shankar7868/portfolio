@@ -245,7 +245,7 @@ export default function Projects() {
                     <p className="text-cyan-400 font-extrabold text-lg mb-6">AI Legal Assistant</p>
                     
                     <p className="text-slate-300 leading-relaxed mb-6 font-medium">
-                      An AI-powered legal tech platform that automates complex legal document analysis. It utilizes optical character recognition (OCR) to process documents, routing them through intelligent Switch Nodes in n8n. The Gemini API acts as a legal agent, detecting hidden risks, answering user queries, and summarizing complex legal clauses.
+                      LexiGuard is an AI-powered legal assistant designed to simplify the understanding of legal documents and contracts. By transforming complex legal language into clear, actionable insights, it enables users to identify key clauses, assess potential risks, and make informed decisions through an intuitive and user-friendly experience.
                     </p>
 
                     <h4 className="text-sm font-extrabold text-white uppercase tracking-wider mb-3">AI Agent Workflow</h4>
