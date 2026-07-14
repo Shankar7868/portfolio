@@ -4,7 +4,6 @@ import { Trophy, Star, Medal, Award, LucideIcon } from 'lucide-react';
 
 interface AchievementItem {
   title: string;
-  description: string;
   icon: LucideIcon;
   color: string;
   bg: string;
@@ -14,7 +13,6 @@ interface AchievementItem {
 const achievementsData: AchievementItem[] = [
   {
     title: "450+ LeetCode Problems Solved",
-    description: "Solved over 450 problems on LeetCode, strengthening expertise in data structures, algorithms, and competitive problem-solving across varying difficulty levels.",
     icon: Trophy,
     color: "text-yellow-400",
     bg: "bg-yellow-400/10",
@@ -22,7 +20,6 @@ const achievementsData: AchievementItem[] = [
   },
   {
     title: "Academic Excellence — 9.28 CGPA",
-    description: "Maintained an outstanding academic grade of 9.28 at SASTRA University, demonstrating consistent academic rigor and deep technical understanding.",
     icon: Star,
     color: "text-purple-400",
     bg: "bg-purple-400/10",
@@ -30,7 +27,6 @@ const achievementsData: AchievementItem[] = [
   },
   {
     title: "Udemy ML Certification",
-    description: "Obtained an industry-recognized Machine Learning certification from Udemy, validating proficiency in supervised and unsupervised learning techniques, model evaluation, and real-world ML applications.",
     icon: Award,
     color: "text-emerald-400",
     bg: "bg-emerald-400/10",
@@ -74,12 +70,9 @@ export default function Achievements() {
                 <div className={`w-14 h-14 rounded-2xl ${item.bg} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   <Icon size={28} className={item.color} />
                 </div>
-                <h3 className="text-2xl font-extrabold text-white mb-3 tracking-tight group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-cyan-400 transition-all duration-300">
+                <h3 className="text-2xl font-extrabold text-white tracking-tight group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-cyan-400 transition-all duration-300">
                   {item.title}
                 </h3>
-                <p className="text-slate-400 leading-relaxed font-semibold text-sm">
-                  {item.description}
-                </p>
               </motion.div>
             );
           })}
