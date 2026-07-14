@@ -31,39 +31,17 @@ const skillsData: SkillCategoryType[] = [
     icon: Layout,
     tag: "frontend",
     skills: [
-      { name: "React", level: 85 },
       { name: "HTML", level: 95 },
       { name: "CSS", level: 90 }
     ]
   },
-  {
-    category: "Backend",
-    icon: Server,
-    tag: "backend",
-    skills: [
-      { name: "Django", level: 75 }
-    ]
-  },
-  {
-    category: "Artificial Intelligence",
-    icon: Brain,
-    tag: "ai",
-    skills: [
-      { name: "Machine Learning", level: 85 },
-      { name: "Deep Learning", level: 80 },
-      { name: "TensorFlow", level: 85 },
-      { name: "Keras", level: 80 },
-      { name: "Scikit-learn", level: 85 }
-    ]
-  },
+
   {
     category: "Workflow Automation",
     icon: Workflow,
     tag: "automation",
     skills: [
-      { name: "n8n", level: 90 },
-      { name: "AI Agents", level: 85 },
-      { name: "Gemini API", level: 90 }
+      { name: "n8n", level: 90 }
     ]
   },
   {
@@ -71,19 +49,10 @@ const skillsData: SkillCategoryType[] = [
     icon: Cloud,
     tag: "cloud",
     skills: [
-      { name: "AWS EC2", level: 75 },
-      { name: "Docker", level: 75 },
       { name: "Vercel", level: 80 }
     ]
   },
-  {
-    category: "Database",
-    icon: Database,
-    tag: "database",
-    skills: [
-      { name: "MySQL", level: 80 }
-    ]
-  },
+
   {
     category: "Tools & Platforms",
     icon: Wrench,
