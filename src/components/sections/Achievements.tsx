@@ -13,32 +13,24 @@ interface AchievementItem {
 
 const achievementsData: AchievementItem[] = [
   {
-    title: "Startup Survival Arena Winner",
-    description: "Secured first place in the intensive Startup Survival Arena competition, showcasing innovative problem-solving and rapid prototyping skills.",
+    title: "450+ LeetCode Problems Solved",
+    description: "Solved over 450 problems on LeetCode, strengthening expertise in data structures, algorithms, and competitive problem-solving across varying difficulty levels.",
     icon: Trophy,
     color: "text-yellow-400",
     bg: "bg-yellow-400/10",
     border: "border-yellow-400/20"
   },
   {
-    title: "Hackathon Excellence",
-    description: "Participated and excelled in multiple national-level hackathons, building AI-driven solutions under tight deadlines.",
-    icon: Medal,
-    color: "text-cyan-400",
-    bg: "bg-cyan-400/10",
-    border: "border-cyan-400/20"
-  },
-  {
-    title: "Academic Excellence",
-    description: "Maintained a high CGPA of 9.28 at SASTRA University, demonstrating consistent academic rigor and technical understanding.",
+    title: "Academic Excellence — 9.28 CGPA",
+    description: "Maintained an outstanding academic grade of 9.28 at SASTRA University, demonstrating consistent academic rigor and deep technical understanding.",
     icon: Star,
     color: "text-purple-400",
     bg: "bg-purple-400/10",
     border: "border-purple-400/20"
   },
   {
-    title: "Technical Certifications",
-    description: "Earned advanced certifications in Machine Learning, Deep Learning, and Cloud Architecture from leading industry providers.",
+    title: "Udemy ML Certification",
+    description: "Obtained an industry-recognized Machine Learning certification from Udemy, validating proficiency in supervised and unsupervised learning techniques, model evaluation, and real-world ML applications.",
     icon: Award,
     color: "text-emerald-400",
     bg: "bg-emerald-400/10",
