@@ -125,7 +125,7 @@ export default function About() {
             </h3>
             
             <p className="text-slate-300 text-base md:text-lg leading-relaxed mb-10 font-medium">
-              I am a Machine Learning enthusiast with hands-on exposure to AI-powered application development. Skilled in Python, TensorFlow, and Scikit-learn, with a strong interest in building intelligent solutions through machine learning and workflow automation. Passionate about solving real-world problems by developing efficient, scalable, and practical AI applications.
+              Enthusiastic Computer Science undergraduate with a strong foundation in software development, data structures, and web technologies. Proficient in Python, Java, JavaScript and GitHub, with hands-on experience building AI-powered and full-stack web applications. Passionate about solving real-world problems through scalable, efficient, and user-centric software solutions while continuously expanding technical expertise.
             </p>
 
             {/* High-Contrast Grid Layout */}
