@@ -125,7 +125,7 @@ export default function About() {
             </h3>
             
             <p className="text-slate-300 text-base md:text-lg leading-relaxed mb-10 font-medium">
-              Enthusiastic Computer Science undergraduate with a strong foundation in software development, data structures, and web technologies. Proficient in Python, Java, JavaScript and GitHub, with hands-on experience building AI-powered and full-stack web applications. Passionate about solving real-world problems through scalable, efficient, and user-centric software solutions while continuously expanding technical expertise.
+              Computer Science undergraduate driven by a passion for software engineering and artificial intelligence. Experienced in developing AI-powered and full-stack web applications, with a focus on writing clean, efficient, and scalable code. Always eager to learn emerging technologies and build solutions that create meaningful impact.
             </p>
 
             {/* High-Contrast Grid Layout */}
