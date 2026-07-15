@@ -80,9 +80,8 @@ export default function Hero() {
               <Typewriter
                 options={{
                   strings: [
-                    'Machine Learning Enthusiast',
-                    'Workflow Automation Developer',
-                    'Deep Learning Developer'
+                    'AI driven frontend developer',
+                    'Workflow Automation Developer'
                   ],
                   autoStart: true,
                   loop: true,

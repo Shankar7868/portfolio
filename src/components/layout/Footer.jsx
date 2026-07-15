@@ -25,7 +25,7 @@ export default function Footer() {
               KGSR.
             </h2>
             <p className="text-slate-400 font-medium max-w-sm text-sm">
-              Machine Learning & Automation Developer. Building intelligent systems for the modern web.
+              AI Driven Frontend & Workflow Automation Developer.
             </p>
           </div>
 

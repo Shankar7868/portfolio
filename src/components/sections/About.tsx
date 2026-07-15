@@ -120,7 +120,7 @@ export default function About() {
             className="w-full lg:w-7/12"
           >
             <h3 className="text-2xl md:text-3xl font-extrabold mb-6 text-white leading-tight">
-              Machine Learning Enthusiast & <br />
+              AI Driven Frontend Developer & <br />
               <span className="text-cyan-400">Workflow Automation Developer</span>
             </h3>
             
