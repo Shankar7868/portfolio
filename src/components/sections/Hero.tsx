@@ -81,7 +81,8 @@ export default function Hero() {
                 options={{
                   strings: [
                     'AI driven frontend developer',
-                    'Workflow Automation Developer'
+                    'Workflow Automation Developer',
+                    'ML Enthusiast'
                   ],
                   autoStart: true,
                   loop: true,
