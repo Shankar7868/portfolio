@@ -16,33 +16,13 @@ interface SkillCategoryType {
 
 const skillsData: SkillCategoryType[] = [
   {
-    category: "Programming",
+    category: "Programming Languages",
     icon: Terminal,
     tag: "coding",
     skills: [
       { name: "Python", level: 90 },
       { name: "Java", level: 85 },
-      { name: "JavaScript", level: 85 },
       { name: "SQL", level: 80 }
-    ]
-  },
-  {
-    category: "Frontend",
-    icon: Layout,
-    tag: "frontend",
-    skills: [
-      { name: "HTML", level: 95 },
-      { name: "CSS", level: 90 }
-    ]
-  },
-
-  {
-    category: "Automation & Deployment",
-    icon: Workflow,
-    tag: "automation",
-    skills: [
-      { name: "n8n", level: 90 },
-      { name: "Vercel", level: 80 }
     ]
   },
   {
@@ -50,11 +30,22 @@ const skillsData: SkillCategoryType[] = [
     icon: Wrench,
     tag: "tools",
     skills: [
-      { name: "Git", level: 85 },
       { name: "GitHub", level: 85 },
-      { name: "VS Code", level: 90 },
+      { name: "Docker", level: 80 },
+      { name: "n8n", level: 90 },
+      { name: "Vercel", level: 85 },
       { name: "antigravity", level: 80 },
-      { name: "google flow", level: 80 }
+      { name: "AWS EC2", level: 80 }
+    ]
+  },
+  {
+    category: "AI Tools",
+    icon: Brain,
+    tag: "ai",
+    skills: [
+      { name: "Gemini API", level: 85 },
+      { name: "claude", level: 80 },
+      { name: "antigravity", level: 85 }
     ]
   }
 ];
